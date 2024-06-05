@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Фон</title>
+</head>
+<body>
+    <h1>Оберіть колір фону</h1>
+
+    <div class="container">
+        <div class="column">
+            <div class="input-group">
+                <input type="radio" id="white" name="color" value="white">
+                <label for="white">Стандартний</label>
+            </div>
+            <div class="input-group">
+                <input type="radio" id="blue" name="color" value="blue">
+                <label for="blue">Синій</label>
+            </div>
+            <div class="input-group">
+                <input type="radio" id="green" name="color" value="green">
+                <label for="green">Зелений</label>
+            </div>
+            <div class="input-group">
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">Червоний</label>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+const radioInputs = document.getElementsByName('color');
+
+for (const input of radioInputs) {
+  input.addEventListener('change', (event) => {
+    document.body.style.backgroundColor = event.target.value;
+  });
+}
+
+</script>
+</body>
+</html>
